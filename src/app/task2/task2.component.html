@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="jumbotron text-center">
+    <button type="button" class="btn btn-primary" (click)="toggleInfo()">{{ buttonText }}</button>
+  </div>
+</div>
+
+<app-map
+  class="map"
+  [center]="[389585.1456299474, 5661730.3760198355]"
+  [zoom]="19"
+  [url]="'https://wipperfuerth.pgconnect.de/api/v1/webgis/grab?friedhofId=440d1500-d5d5-4bf9-bf06-7725cf17170f'"
+  (mapReady)="onMapReady($event)"
+></app-map>
